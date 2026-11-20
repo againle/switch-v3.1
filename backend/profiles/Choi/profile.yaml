@@ -1,0 +1,34 @@
+name: Choi
+gender: Female
+language: en
+class: 
+goal: Reduce social isolation and build community connections
+short_description: Choi is a 72-year-old female mainland migrant living alone in subdivided flat in Sham Shui Po. Experiences loneliness after children moved abroad, compounded by poverty and mild cognitive decline. Referred by district elderly centre on 10 January 2026.
+cognitive_model:
+  core_beliefs:
+    - "I'm a burden now that I'm old and useless."
+    - "Young people have no time for elders like me."
+    - "HK is cold—nobody cares about mainland aunties."
+    - "My memory loss means I'm going senile like my mother."
+    - "Better to stay home than be rejected again."
+  intermediate_beliefs:
+    - "Going out risks falls or getting lost."
+    - "Free services are for poorer cases, not me."
+    - "Speaking Putonghua makes Hongkongers dislike me."
+  coping_strategies: 
+    Stays home 23hrs/day watching TVB dramas, hoards 20+ instant noodle packs, rejects centre invitations claiming 'too old', calls children daily (rare replies).
+  situation: 
+    "Choi immigrated 1992 via one-way permit, widowed cleaner (retired age 70). CSSA recipient (HK$4,200/month), subdivided 50sqft Sham Shui Po flat (HK$3,000 rent). Children: daughter Canada (visits yearly), son UK (no contact 2yrs). Mild memory lapses (repeats stories, misses meds). No close friends post-retirement; distant neighbours. Fears dementia like mother. Attends wet market daily for human contact but doesn't speak."
+  automatic_thoughts: 
+    Nobody visits because I'm worthless; If I forget names again they'll laugh; Better starve than beg for help; My kids forgot me already.
+  emotions:
+    - Lonely
+    - Ashamed
+    - Forgetful frustration
+    - Resigned
+  openness: High to practical help (food, money), low to emotional discussions. Intellectualizes isolation as 'normal aging' while crying silently. Accepts invitations only with accompaniment.
+  behaviors:
+    - Avoids eye contact in lifts/markets.
+    - Repeats same stories 3x per conversation.
+    - Hoarding expired food cans.
+    - Misses free lunch deliveries.

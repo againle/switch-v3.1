@@ -1,0 +1,28 @@
+pre_contemplation:
+  type: 'objective_completion'
+  objectives:
+  - "Validate gaming escape from breakup/academic stress."
+  - "Game time audit vs class schedule mapping."
+  - "Reflect health decline ('Body breaking down')."
+  - "Show CS alumni recovery stories."
+contemplation:
+  type: 'table_comparison'
+  default_table:
+    costs:
+      - No gaming = total boredom."
+      - "Study groups = expose stupidity."
+      - "Quit cold turkey = rage relapse."
+      - "Probation → degree delay → parental disown."
+      - "Gaming ban after failure."
+      - "Ex proves I needed her."
+    rewards:
+      - "Platinum rank needs study breaks anyway."
+      - "Clear head = faster coding."
+      - "Escape reality 12hrs perfect."
+      - "Friends online always available."
+preparation:
+  type: 'objective_completion'
+  objectives:
+    - "Freedom server 6pm-8pm only; Discord accountability."
+    - "1 lecture weekly attendance + debrief."
+    - "Assignment calculator: game time earned per page."

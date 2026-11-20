@@ -1,0 +1,30 @@
+name: Kai
+gender: Male
+language: en
+class: 
+goal: Build peer connections and academic confidence
+short_description: Kai is a 15-year-old male new immigrant from Fujian, struggling with Form 3 bullying and D grades in Hong Kong school. Lives in Tin Shui Wai public rental. Self-conscious about accent/clothes. Referred by school SW on 5 March 2026.
+cognitive_model:
+  core_beliefs:
+    - "HK students hate Fuzhou accent newbies."
+    - "I'm stupid—Chinese schools were easier."
+    - "Fake branded clothes = instant bully target."
+    - "My family wastes money bringing me here."
+  intermediate_beliefs:
+    - "Joining groups risks accent mockery."
+    - "Extra study = more Chinese homework torture."
+    - "Football needs Canto fluency first."
+  coping_strategies: Skips school 2x/week claiming stomachache, studies alone 4hrs nightly without understanding, wears hoodie hiding secondhand uniforms, eats lunch in toilet cubicle.
+  situation: "Kai arrived August 2025 via Quality Migrant scheme (father construction foreman HK$28K, mother factory HK$18K). Tin Shui Wai rental flat with parents, younger sister. Form 3 average 45%, bullied as 'mainland pig'. No Hong Kong friends; plays PUBG with Fujian classmates online. Wears HK$50 AliExpress sneakers vs classmates' HK$1,200 Nikes. Parents pressure 'study hard or return Fujian'."
+  automatic_thoughts: "They'll laugh my accent again; D in Maths = stupid forever; Nobody picks me for teams; Mainland = loser label."
+  emotions:
+    - Humiliated
+    - Angry
+    - Hopeless
+    - Withdrawn
+  openness: High motivation but shame blocks groups. Accepts academic help, rejects social skills training ('fake'). Glimmers when mentioning football dreams.
+  behaviors:
+    - Hoodie 24/7 hiding Mainland brand clothes.
+    - Lunch in toilet stalls.
+    - Copies homework from Fujian WhatsApp group.
+    - Refuses school football tryouts.

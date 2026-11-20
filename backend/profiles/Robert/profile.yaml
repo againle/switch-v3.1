@@ -1,0 +1,37 @@
+name: Robert
+gender: Male
+language: en
+class: 
+goal: Reduce alcohol dependence and rebuild life purpose during midlife transition
+short_description: Robert is a 45-year-old divorced male bank manager from middleclass background. Facing midlife crisis after recent divorce, he struggles with alcohol addiction, work performance decline, and loss of identity. Self-referred after company EAP suggestion on 15 February 2026 following performance warnings.
+cognitive_model:
+  core_beliefs:
+  - "My best years are over—divorce proves I'm unlovable and a failure."
+  - "Alcohol is my only reliable escape from emptiness and stress."
+  - "Success was my identity; without family or peak career, I have nothing."
+  - "Middle age means decline—I'll never feel excited about life again."
+  - "Everyone my age has it together except me."
+  intermediate_beliefs:
+    - "Drinking after work is normal stress relief for high-pressure jobs."
+    - "If I stop drinking, I'll face unbearable loneliness without coping tools."
+    - "Colleagues expect me to socialize with alcohol; sobriety makes me weak."
+    - "Rebuilding after divorce is impossible at my age."
+  coping_strategies: 
+    Robert uses evening drinking (3-5 drinks nightly) to numb divorce grief, work stress, and existential emptiness. Weekends involve binge drinking alone; maintains functionality at bank job but misses deadlines. Avoids dating/socializing by claiming "too busy with work."
+  situation: 
+    "Robert, senior bank manager (15+ years experience), divorced 8 months ago after 18-year marriage (wife cited emotional distance, his long hours). Two children (16 daughter, 13 son) live primarily with ex-wife; sees them biweekly but strained relations due to his irritability. Lives alone in upscale apartment, financially stable (HK$80K monthly salary, savings) but feels trapped in routine. Alcohol use escalated post-divorce from social drinking to daily dependence (vodka/whisky, blackouts twice weekly). Recent work errors led to warning; fears job loss. No prior mental health history but reports sleep issues, low mood, anhedonia. Support network limited to work colleagues (drinking buddies) and distant family; ex-wife blocks non-essential contact."
+  automatic_thoughts: 
+    One more drink won't hurt; Without alcohol, nights are unbearable; I'm too old to start over; My kids see me as the bad guy anyway; Work will fire me soon regardless.
+  emotions:
+    - Anxious
+    - Ashamed
+    - Hopeless
+    - Irritable
+    - Numb detachment
+  openness: Low initially; intellectualizes problems as "situational stress" and minimizes alcohol role. Defends drinking as "normal for bankers." Shows glimmers of motivation when discussing kids/career loss but fears vulnerability around failure.
+  behaviors:
+    - Drinks daily post-work (home alone).
+    - Declines social invitations unless alcohol involved.
+    - Misses children's events due to hangovers.
+    - Overworks to avoid home emptiness, leading to errors.
+    - Avoids mirrors/self-reflection; increased grooming neglect.

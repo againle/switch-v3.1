@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--
+    viewport-fit=cover      enables env(safe-area-inset-*) for the notch/home bar
+    interactive-widget      makes the on-screen keyboard shrink the layout
+                            viewport instead of pushing the page off-screen
+    (deliberately NOT maximum-scale/user-scalable: disabling pinch-zoom is an
+     accessibility anti-pattern; the auto-zoom is fixed by font-size instead)
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>SWITCH v3.0-alpha</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M12 10c-2.5 0-4.5 2-4.5 4.5v1c0 2.5 2 4.5 4.5 4.5h1.5l2 2v-2.5c2.5 0 4.5-2 4.5-4.5v-1c0-2.5-2-4.5-4.5-4.5h-3.5z' fill='none' stroke='%23128c7e' stroke-width='2' stroke-linejoin='round'/><path d='M16 13c-1.5 0-2.7 1.2-2.7 2.7v.6c0 1.5 1.2 2.7 2.7 2.7h.8l1.2 1.2v-1.4c1.5 0 2.7-1.2 2.7-2.7v-.6c0-1.5-1.2-2.7-2.7-2.7h-2z' fill='%23128c7e'/></svg>">
+  <link rel="stylesheet" href="/static/styles.css?v=15">
+</head>
+<body>
+  <div class="shell">
+    <aside id="sidebar" class="panel sidebar">
+      <button id="nav-close" class="nav-close" type="button" aria-label="Close settings menu">&#10005;</button>
+
+      <div class="brand">
+        <span class="brand-kicker">SWITCH v3.0-alpha</span>
+        <h1>Interactive Client [Test]</h1>
+        <p>Chat with behavioral client in real-time.</p>
+      </div>
+
+      <label class="field-label" for="profile-select">Profile</label>
+      <select id="profile-select"></select>
+
+      <div class="stack">
+        <button id="connect-btn" class="primary">Connect</button>
+      </div>
+
+      <div class="status-card">
+        <div class="status-row">
+          <span>Connection</span>
+          <strong id="connection-state">Disconnected</strong>
+        </div>
+        <div class="status-row">
+          <span>Profile</span>
+          <strong id="profile-state">-</strong>
+        </div>
+        <div class="status-row">
+          <span>SID</span>
+          <button id="session-id" class="copy-id" type="button" disabled
+                  title="Graph session ID used by the context manager — click to copy">—</button>
+        </div>
+        <div class="status-row">
+          <span>Timer</span>
+          <strong id="timer-state">0.0s / 0.0s</strong>
+        </div>
+        <div class="status-row">
+          <span>Assist mode</span>
+          <strong id="assist-mode">idle</strong>
+        </div>
+      </div>
+
+      <div class="status-card subtle">
+        <p id="description" class="description">Select a profile and press Connect.</p>
+      </div>
+
+      <!-- Session report: pinned to the bottom of the sidebar. -->
+      <button id="savepdf-btn" class="secondary save-pdf-btn" title="Download this session as a PDF and save its JSON to logs/json." disabled>Save PDF</button>
+    </aside>
+
+    <main class="panel chat-panel">
+      <header class="chat-header">
+        <div class="header-left">
+          <button id="nav-toggle" class="nav-toggle" type="button"
+                  aria-label="Open settings menu" aria-controls="sidebar" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <span class="brand-kicker">Conversation</span>
+            <h2 id="chat-title">No session yet</h2>
+          </div>
+        </div>
+        <div class="header-right">
+          <button id="pause-btn" class="badge-btn hidden">Stop</button>
+          <div id="live-badge" class="badge muted">disconnected</div>
+        </div>
+      </header>
+
+      <section id="chat-log" class="chat-log">
+        <div id="thinking-indicator" class="thinking-dots hidden"><span></span><span></span><span></span></div>
+      </section>
+
+      <form id="composer" class="composer">
+        <input id="message-input" type="text" placeholder="" autocomplete="off" disabled>
+        <button id="send-btn" type="submit" disabled>Send</button>
+      </form>
+    </main>
+  </div>
+
+  <!-- Phone layout: tapping the backdrop closes the settings drawer. -->
+  <div id="sidebar-scrim" class="scrim"></div>
+
+  <script src="/static/app.js?v=14"></script>
+</body>
+</html>

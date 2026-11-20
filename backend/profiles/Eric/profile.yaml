@@ -1,0 +1,30 @@
+name: Eric
+gender: Male
+language: en
+class: 
+goal: Overcome academic procrastination and social withdrawal
+short_description: Eric is a 21-year-old CUHK computer science Year 3 student from Mid-Levels, failing courses due to gaming addiction and depression after breakup. Middle-class family pressure. Self-referred counselling centre 1 March 2026.
+cognitive_model:
+  core_beliefs:
+    - "CS geniuses code 18hrs; I'm just average."
+    - "HKU rejects = lifelong parental shame."
+    - "Gaming friends understand me more than family."
+    - "Depression = weak character flaw."
+  intermediate_beliefs:
+    - "One more game rank-up = confidence boost."
+    - "Professors hate repeaters like me."
+    - "Sleep 3hrs = true programmer lifestyle."
+  coping_strategies: League of Legends 12hrs daily (Silver rank), skips 70% lectures, Adderall from classmate (HK$200/pill), lies parents 'group project', Instagram lurks exgirlfriend.
+  situation: "Eric (HK$15K living allowance), parents doctors (Deep Water Bay). Year 3 GPA 1.8/4.3 risking probation. Broke up with girlfriend (HKU medicine) December 2025 ('immature gamer'). Daily routine: 4pm wake, game till 6am, 2hrs fake study. Clubhouse avoidance. Family dinner silence. Failed 2 summer internships."
+  automatic_thoughts: One loss = trash player; Assignment due = certain F; Ex happy without me; Parents right—I'm wasted potential.
+  emotions:
+    - Ashamed
+    - Apathetic
+    - Enraged (game losses)
+    - Empty
+  openness: High insight ('gaming problem'), low action commitment ('semester too late'). Accepts CBT ideas intellectually, skips sessions if gaming raid scheduled.
+  behaviors:
+    - Blue light glasses 24/7 (gamer aesthetic).
+    - Energy drinks 8 cans daily.
+    - Deletes assignment reminders.
+    - Ghosts tutorial groups.

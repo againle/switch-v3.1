@@ -1,0 +1,41 @@
+pre_contemplation:
+  type: 'objective_completion'
+  objectives:
+    - "Build rapport by validating midlife/divorce stressors common in high-achievers. Normalize alcohol as initial coping without judgment; gather drinking patterns/history empathetically."
+    - "Explore core loss (family, identity) via open questions (e.g., 'What feels most empty now?'), focusing on understanding pain rather than confronting alcohol yet."
+    - "Reflect ambivalence gently (e.g., 'Sounds exhausting maintaining everything alone') to surface internal conflict without defensiveness."
+    - "Identify strengths like stable career/finances/parental love as anchors for change, framing as his proven resilience."
+contemplation:
+  type: 'table_comparison'
+  default_table:
+    costs:
+      - "Quitting alcohol means facing divorce pain head-on without escape."
+      - "Sober social life feels awkward and isolating at my age."
+      - "Work stress without drinks will overwhelm me completely."
+      - "Admitting addiction means seeing myself as weak/failure."
+      - "If I change, ex-wife/kids still won't respect me."
+      - "Staying the same keeps my routine intact—no risky changes."
+      - "Drinking maintains work camaraderie with colleagues."
+      - "Alcohol will cost my job and destroy my career."
+      - "Kids will distance permanently if drinking continues."
+      - "Health decline (liver, sleep) becomes irreversible."
+      - "Midlife crisis worsens into full depression."
+      - "Financial stability erodes from DUIs/legal issues."
+    rewards:
+      - "Sobriety restores work sharpness and saves career."
+      - "Clear mind enables rebuilding father relationship."
+      - "New hobbies/dating possible with life purpose."
+      - "Health improves (sleep, energy, appearance)."
+      - "Financially stronger long-term without addiction costs."
+      - "Authentic connections replace superficial drinking ones."
+      - "Immediate stress relief from daily drinks."
+      - "No need to face painful emotions yet."
+      - "Maintains familiar routine/comfort zone."
+      - "Work socializing stays easy with alcohol."
+preparation:
+  type: 'objective_completion'
+  objectives:
+  - "Collaborate on trial sobriety plan (e.g., 3 alcohol-free evenings/week using alternatives like gym/AA meetings); frame as experiment tracking mood/energy."
+  - "Develop concrete steps: EAP counseling referral, family therapy for kids contact, bank wellness program; weekly milestones with accountability check-ins."
+  - "Role-play high-risk situations (post-work drinks invite, divorce triggers) with refusal skills and support contacts (sponsor/hotline)."
+  - "Secure 2-week commitment measuring via drink journal, work feedback, child interactions; celebrate small wins to build momentum."

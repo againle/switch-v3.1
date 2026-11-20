@@ -1,0 +1,12 @@
+pre_contemplation:
+  type: "objective_completion"
+  objectives:
+    - "."
+contemplation:
+  type: "objective_completion"
+  objectives:
+    - "."
+preparation:
+  type: "objective_completion"
+  objectives:
+    - "."

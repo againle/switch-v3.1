@@ -1,0 +1,20 @@
+pre_contemplation:
+  type: 'objective_completion'
+  objectives:
+    - "Validate new immigrant bullying realities without pity. Map safe spaces (toilet lunch, backrow seat)."
+    - "Ask 'What Mainland school activities did you enjoy?' to surface strengths."
+    - "Reflect hoodie safety ('Makes sense hiding from bullies') building trust."
+    - "Show Fujian-origin classmates doing well as proof possible."
+contemplation:
+  type: 'objective_completion'
+  objectives:
+    - "Explore bully triggers vs safe interactions using class maps."
+    - "Elicit football dreams vs accent fears; normalize gradual Canto."
+    - "Connect isolation to worsening grades; show study buddy models."
+    - "Highlight family sacrifice (HK$46K combined income) as change rationale."
+preparation:
+  type: 'objective_completion'
+  objectives:
+    - "Trial 1 lunch with 1 Fujian classmate; debrief what worked."
+    - "Join afterschool football walking group (no speaking needed)."
+    - "Daily 10 new Canto words via phone app; test with worker."

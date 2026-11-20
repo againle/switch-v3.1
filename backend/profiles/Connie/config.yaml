@@ -1,0 +1,45 @@
+pre_contemplation:
+  type: "objective_completion"
+  objectives:
+    - "Establish rapport by validating stroke impacts and family support without judgment. Gather baseline on fears, history, and goals; observe concentration shifts empathetically."
+    - "Explore perceptions of mobility limits and concentration via open questions (e.g., 'What happens when you try going out alone?'), focusing on understanding her fears rather than challenging."
+    - "Reflect her dependence patterns gently (e.g., 'It sounds exhausting always needing accompaniment') to build awareness without defensiveness."
+    - "Identify initial strengths like rehab adherence and church attendance as positive foundations, framing as her resources."
+contemplation:
+  type: "objective_completion"
+  objectives:
+    - "Guide exploration of dependence pros/cons (e.g., safety vs. isolation) using her examples; let her weigh family reliance vs. independence without pushing."
+    - "Elicit fears of solo mobility (dizziness, falls) and emotional barriers (impatience); validate based on stroke reality while noting small independent attempts."
+    - "Connect concentration/emotional swings to potential non-stroke factors (e.g., stress, isolation); normalize ambivalence about change."
+    - "Highlight protective factors (husband care, son bond, faith) as supports for gradual steps, fostering curiosity about alternatives."
+
+  # type: "table_comparison"
+  # default_table:
+  #   costs:
+  #     - "Risk of being abandoned or betrayed if I become vulnerable and trust others"
+  #     - "Losing control over my relationships and feeling powerless"
+  #     - "Having to face painful childhood memories and trauma"
+  #     - "Admitting I was wrong about my controlling behavior"
+  #     - "Potential for partners to take advantage of my openness"
+  #     - "Fear of getting hurt again if I let my guard down"
+  #     - "Having to depend on others and risk disappointment"
+  #     - "Uncertainty about whether change will actually work"
+  #   rewards:
+  #     - "Possibility of having healthier, more trusting relationships"
+  #     - "Reducing constant anxiety from monitoring and controlling partners"
+  #     - "Freedom from exhausting surveillance behaviors"
+  #     - "Potential for genuine emotional connection and intimacy"
+  #     - "Building self-worth that doesn't depend on controlling others"
+  #     - "Developing healthier coping strategies for abandonment fears"
+  #     - "Breaking the cycle of relationship failures"
+  #     - "Finding peace and emotional stability within myself"
+  #   - "Guide Anna to examine her ambivalence using reflective statements like "Part of you wants to trust, but part fears being hurt again," observing for willingness to consider alternatives and reduced defensiveness."
+preparation:
+  type: "objective_completion"
+  objectives:
+    - "Collaborate on small, achievable trials (e.g., short solo walk with crutches when family unavailable); frame as safe experiments."
+    - "Develop action plan: daily focus exercises, expand church/yoga links for support, link to rehab services; break into weekly steps."
+    - "Anticipate barriers (e.g., falls fear) via role-play/backup plans (phone check-ins); build emotional expression skills."
+    - "Secure commitment for 1-week trial with follow-up; measure via self-reported attempts and mood tracking."
+
+

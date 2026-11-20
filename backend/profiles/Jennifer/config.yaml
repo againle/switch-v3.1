@@ -1,0 +1,40 @@
+pre_contemplation:
+  type: 'objective_completion'
+  objectives:
+    - "Validate tiger parenting pressures in HK's kiasu culture without judgment. Gather daily routine/anxiety triggers empathetically; normalize parental stress epidemic."
+    - "Explore beliefs about children's futures via open questions ('What does success look like for your boys?'), reflecting her dedication rather than challenging intensity."
+    - "Mirror her exhaustion gently ('Sounds relentless managing everything alone') to surface physical toll without blame."
+    - "Highlight existing strengths (children's engagement, her organizational skills) as foundation for sustainable adjustments."
+contemplation:
+  type: 'table_comparison'
+  default_table:
+    costs:
+      - "Reducing pressure risks children becoming lazy/uncompetitive."
+      - "Easing up means falling behind other tiger families."
+      - "Less supervision = poor exam results and no top school."
+      - "Change requires confronting my anxiety instead of powering through."
+      - "Husband may think I'm softening standards during his job crisis."
+      - "Scheduled rest time steals from children's study hours."
+      - "Anxiety escalates to full panic disorder or breakdown."
+      - "Children's stress manifests as bedwetting, defiance, health issues."
+      - "Husband withdraws further amid family tension."
+      - "Jennifer's health fails (insomnia → illness → can't function)."
+      - "Cycle continues with kids becoming anxious tiger parents."
+    rewards:
+      - "Balanced routine restores sleep/energy for better parenting."
+      - "Family time rebuilds husband connection during layoff."
+      - "Children learn self-motivation vs. fear-driven performance."
+      - "Jennifer models healthy stress management for kids."
+      - "Sustainable habits ensure long-term academic success."
+      - "Reduces competitive mum group toxicity."
+      - "Immediate grade improvements from intense drilling."
+      - "Maintains tiger mum status in social circle."
+      - "No need to face anxiety or change habits."
+      - "Feels productive through constant activity."
+preparation:
+  type: 'objective_completion'
+  objectives:
+    - "Co-create trial schedule (1hr daily unstructured family time, 30min Jennifer self-care); frame as experiment tracking kids' reactions/anxiety levels."
+    - "Develop steps: family meeting teaching study skills independently, husband's job search support group, anxiety toolbox (breathing apps, 10min walks); weekly milestones."
+    - "Role-play high-pressure scenarios (bad test result, husband frustration) with boundarysetting phrases and child coaching responses."
+    - "Commit to 7-day trial measuring via anxiety log, child homework completion rates, sleep hours; celebrate reductions in yelling incidents."

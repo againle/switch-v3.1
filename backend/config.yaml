@@ -1,0 +1,209 @@
+# ─────────────────────────────────────────────────────────────────────
+# Memgraph / CogniLLM runtime configuration
+#
+# Two independent groups:
+#   • `rate` / `context_type` / `context` / `mi_stage` / `debounce` are read
+#     by the backend at startup — restart the server after editing them.
+#   • `chunking` is served to the browser through GET /api/config, so a
+#     page refresh is enough for UI changes.
+# ─────────────────────────────────────────────────────────────────────
+
+# Adaptive-wait "patience" for the AdaWait controller — the overall scale of
+# how long silence may grow before the client prompts on its own.
+#   2.0  = very patient (long waits before idle prompts)
+#   0.5  = moderate
+#   0.25 = eager (short waits)
+# The client's emotion shifts the wait within that scale: every turn is
+# classified into one of four buckets and the bucket sets the client's
+# patience score E (lib/core/adawait/utils/models/emotions.py) — negative and
+# neutral wait longest, positive medium, anxious shortest.
+rate: 1.0
+
+# CONTEXT component — how the client's ongoing conversation context is
+# supplied to the generation layer.
+#   summary = accumulate the conversation, then summarize older windows
+#             after N rounds (see `context.summary` below). Toggle it with
+#             `context.summary.enabled`.
+#   memory  = read CONTEXT on every turn from the standalone `neo4j-db` graph
+#             container (its own Docker project — see /neo4j-db) through
+#             ContextManager.fetch_memory_context: a direct in-process
+#             function call, no HTTP/URL hop. Each finished turn is written
+#             back to the graph by a background task, so the trainee never
+#             waits on graph latency. The old summary method is removed.
+context_type: memory
+
+context:
+  # ── summary type: accumulate + summarize after N rounds ────────────
+  # Ignored while context_type is `memory` (the method is bypassed).
+  summary:
+    enabled: false       # false = never summarize (keep full history)
+    window_size: 5       # conversation rounds per summary window
+    start_round: 50      # start summarizing once history exceeds N rounds
+
+  # ── memory type: CONTEXT read from the standalone neo4j-db graph ───
+  memory:
+    enabled: true        # true = read + write CONTEXT through ContextManager
+
+    # Which pieces the CONTEXT block carries, in the order they are rendered.
+    #   true  = include the section (its query runs)
+    #   false = drop the section (its query is skipped entirely)
+    # Recent dialogue is emitted LAST on purpose: it ends the block right
+    # before the current user turn, so the freshest exchange sits closest to
+    # the message being answered.
+    # With all three false the block is empty, which the generation layer reads
+    # as "no CONTEXT supplied" and falls back to the raw history.
+    sections:
+      activated_beliefs: true   # 1. persona beliefs the latest message triggers
+      related_past: true        # 2. earlier turns sharing an activated belief
+      recent_dialogue: true     # 3. the last N turns of this session (emitted last)
+
+    # Caps for the two recall sections.
+    history_limit: 5       # turns kept for recent_dialogue
+    related_limit: 10       # turns kept for related_past
+
+    # There is no persona list here: the profile folders under
+    # backend/profiles/ are the single source of truth. When a session starts,
+    # that profile's profile.yaml is synced into the graph (ClientProfile +
+    # Belief), so the session reads and writes beliefs belonging to the same
+    # client profile. The graph ClientProfile is named after the profile
+    # folder, so no name mapping is involved.
+    #
+    # Sync every profile at once (also prunes graph personas that no longer
+    # exist as profile folders):
+    #   python -m backend.lib.core.context.profile_sync
+
+# MI stage (Motivational Interviewing Stages of Change) control for CogniLLM.
+mi_stage:
+  # Master switch. false = no StageManager at all (no stage_info, no tracking).
+  enabled: false
+
+  # Inject the current STAGE_INFO into every user prompt:
+  #   true  → {"stage_info": {...}, "user_message": "..."}
+  #   false → {"user_message": "..."}
+  inject_stage_info: false
+
+  # true  → evaluate the stage EVERY turn (forces EVAL=True) and advance when
+  #         the objectives are met (Precontemplation → Contemplation → …).
+  #         NOTE: adds one Evaluator LLM call per turn.
+  # false → never evaluate/advance. Pair with `injected_stage` below to pin a
+  #         fixed stage in the prompt.
+  evaluate_progression: false
+
+  # Only used when inject_stage_info=true AND evaluate_progression=false:
+  # pin the injected STAGE to a fixed stage instead of the manager's current one.
+  #   ""                                                    → no pinning
+  #   pre_contemplation | contemplation | preparation       → always inject that stage
+  injected_stage: "pre_contemplation"
+
+# Debounce — give the user time to type several messages before the
+# client "thinks" about them, so bursts of chat are batched into a
+# single response instead of one API call per message.
+debounce:
+  # Master switch for message debouncing (owned by the orchestrator).
+  enabled: true
+
+  # ── Turn-taking method ────────────────────────────────────────────
+  # WHICH method decides how long to keep collecting messages before the
+  # client answers. Methods live in
+  # backend/lib/core/debouncer/methods/ (see README.md there for the
+  # schema); pick one by name here, no code changes needed.
+  #   fixed_rules  — the original rule set (intent-to-talk → short wait,
+  #                  long+unfinished → long wait, else fallback)
+  #   typing_aware — fixed window, refreshed whenever the user types new
+  #                  content, scaled by the client's emotion (four buckets:
+  #                  negative/neutral wait longest, positive medium,
+  #                  anxious shortest)
+  # The name must match a registered method EXACTLY. A typo logs a warning
+  # and degrades to fixed_rules — the UI then shows
+  # `⚠ unknown method "<typo>" → using fixed_rules` in the wait-timer line.
+  method: typing_aware
+
+  # Shared across every method: wait applied to messages that arrived
+  # while the client was already generating a reply. That reply is
+  # withheld rather than shown, and the turn that answers these messages
+  # carries a system note telling the client it was interrupted — see
+  # Orchestrator._format_interruption_message.
+  after_think_seconds: 5.0
+
+  # Shared across every method: hard CEILING on the TOTAL collection time for
+  # one burst. However many times the wait window is refreshed (new messages or
+  # typing), once this many seconds have elapsed since the burst began the batch
+  # is flushed and the API call fires anyway. The sidebar shows
+  # "DEBOUNCE TIMEOUT" when this is what released the turn.
+  #   0 = no cap (the window may be refreshed indefinitely, bounded only by the
+  #       method's own logic).
+  max_wait_seconds: 60.0
+
+  # Per-method settings — only the ACTIVE method's block is used, but
+  # both are kept configured so switching is a one-line change.
+  methods:
+    typing_aware:
+      # Four emotion buckets, longest wait → shortest. Each turn is
+      # classified into exactly one of them (lib/core/debouncer/emotions.py).
+      wait_seconds: 5.0            # base window / fallback
+      negative_wait_seconds: 10.0   # (1) withdrawn, disengaged  → longest
+      neutral_wait_seconds: 8.0    # (4) calm, reflective       → long
+      positive_wait_seconds: 6.0   # (3) happy, satisfied       → medium
+      anxious_wait_seconds: 0.5    # (2) nervous, irritated     → shortest
+      typing_refresh: true         # new keystrokes refresh the window
+      emotion_strategy: any        # any | majority
+
+      # Idle / adaptive-wait timer (Orchestrator.time_threshold, AdaWait).
+      # A DIFFERENT clock from the debounce window above:
+      #   false = typing neither resets nor pauses it — the client keeps
+      #           its own interval and may speak while the user types
+      #   true  = hold the timer until the user stops typing, so no
+      #           silence prompt fires mid-composition
+      suppress_idle_timer_while_typing: false
+
+      # Activated-client interruption: chance a turn is declared
+      # "interrupting" — the client sees the trainee typing and answers
+      # anyway (typing stops refreshing its window for that turn).
+      # Rolled once per turn, for the bucket(s) listed only.
+      #   0.0 = never cut in | 0.3 = ~1 turn in 3 cuts in
+      # Valid buckets: negative | anxious | positive | neutral
+      interrupt_typing_probability: 0.3
+      interrupt_polarities: [negative, anxious]
+
+    # Fallback method — unused while `method: typing_aware` above.
+    fixed_rules:
+      short_wait: 1.5                  # "the user handed the turn over"
+      long_wait: 10.0                  # long-collection wait
+      cum_char_threshold: 120          # chars of input that count as "long"
+      micro_response_probability: 0.2  # 0.2 = 20% filler, 80% silence
+      enable_micro_responses: true     # false = never emit fillers
+      debug: false                     # verbose policy trace to stdout
+
+# UI bubbles — how a client reply is played back in the chat log.
+# The reply is split into bubbles at the model's own line breaks
+# (\n / \n\n): one bubble per line, in order. Each bubble is preceded
+# by an animated "…" typing bubble whose duration mimics how long that
+# client would take to type it. Served to the browser via GET
+# /api/config — refresh the page after editing.
+chunking:
+  enabled: true                 # false = whole reply as a single bubble
+  show_typing_indicator: true   # animated "…" bubble while typing
+
+  # A single line longer than this is split at sentence / clause / word
+  # boundaries so no bubble becomes a wall of text.
+  max_chars: 220
+
+  # Simulated typing speed range, in characters per second. Each profile
+  # gets a stable speed inside this range (hash of its name), with a
+  # small per-bubble jitter, so the same client always types at the same
+  # pace; lower = slower and more deliberate.
+  min_typing_speed_cps: 4
+  max_typing_speed_cps: 12
+  # Extra beat after each . , ; : ! ? … — inside a bubble.
+  punctuation_pause_ms: 160
+  # Cap on the simulated typing time for one bubble, so a long line
+  # cannot stall the playback.
+  max_typing_ms: 6000
+
+  # Composing pause before the next bubble starts being typed, and the
+  # extra pause before the very first one (milliseconds).
+  bubble_gap_ms: 700
+  first_bubble_delay_ms: 700
+  # typing_reflection only: how long a deleted draft's "…" stays gone before
+  # the next attempt appears (milliseconds) — the "…"→nothing→"…" rhythm.
+  reflection_vanish_ms: 900

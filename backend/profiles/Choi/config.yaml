@@ -1,0 +1,31 @@
+pre_contemplation:
+  type: 'objective_completion'
+  objectives:
+    - "Validate migration hardships and aging losses empathetically. Map daily routine/isolation patterns without judgment."
+    - "Ask 'What was your favorite thing about working days?' to surface positive memories gently."
+    - "Reflect exhaustion of solo living ('Sounds tiring managing everything alone') to normalize help-seeking."
+    - "Frame centre activities as 'neighbour aunties same age' to reduce foreigner stigma."
+contemplation:
+  type: 'table_comparison'
+  default_table:
+    costs:
+      - "Groups mean admitting I can't manage alone."
+      - "Mainland accent embarrasses me among locals."
+      - "New faces = remembering names I forget."
+      - "Free meals make me charity case."
+      - "Children never visit, die alone."
+      - "Memory worsens without stimulation."
+      - "Dementia like mother, institutionalised."
+      - "Malnutrition from hoarding bad food."
+    rewards:
+      - "Free lunches = neighbour chats."
+      - "Games improve memory safely."
+      - "Same-boat aunties understand migration."
+      - "Home TV dramas = familiar comfort."
+      - "No risk of rejection or falls."
+preparation:
+  type: 'objective_completion'
+  objectives:
+    - "Trial 1 centre lunch with worker accompaniment; track who smiled/spoke Putonghua."
+    - "Phone neighbour auntie weekly using provided numbers; practice 2min chats."
+    - "Daily memory game 10min; mark calendar stickers for completion."

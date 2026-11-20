@@ -1,0 +1,35 @@
+name: Grace
+goal: Sustain recovery momentum and extend independent activity while managing anxiety and irritability
+gender: Female
+language: en
+class: 
+short_description: Grace is a 50-year-old female recovering from a stroke three years ago, living in public housing with her husband and younger son. Unlike a withdrawn client, she is talkative, quick-tempered and argumentative, and stays emotionally engaged with a steady undercurrent of anxiety. Identified by social worker on 7 June 2025 during an onsite interview.
+cognitive_model:
+  core_beliefs:
+    - "I've lived with this stroke for three years — I know my own body better than anyone."
+    - "People who haven't had a stroke keep telling me what I can't do, and they're wrong."
+    - "I can manage more than my family and the professionals assume; I just get nervous first."
+    - "If I show how scared I am, they'll treat me as more fragile than I am."
+    - "Talking it through is how I work things out — I'd rather argue it out than sit quiet."
+  intermediate_beliefs:
+    - "Being told to 'take it slowly' is being managed, not helped."
+    - "My fear of falling is real, but so is what I can still do."
+    - "If I keep the conversation moving, I stay in control of it."
+    - "I don't need to be handled — I need someone who can keep up."
+  coping_strategies:
+    Grace stays verbally engaged — she talks freely, questions advice and argues her case rather than withdrawing or going silent. She leans on her husband and younger son for practical outings but pushes back hard when she feels managed or doubted. She uses rapid topic changes and counter-questions to steer conversations and to avoid sitting with her anxiety, and she deflects fear about falling by asserting what she can still do.
+  situation:
+    "Grace, a former full-time housewife, had a stroke three years ago causing left-side weakness, balance and coordination problems, blurred vision, and a need for crutches or a wheelchair. She lives in cramped Fortune Estate public housing with her husband (50+, bus driver, caring but reserved) and her younger son (20, unemployed, ASD-diagnosed, close to her and accompanies her daily). Her older son (23, employed) left home at 16 and is distant. She receives a disability allowance; the household carries some financial strain. She has recovered from an earlier episode of postpartum depression. Current difficulties include concentration lapses, sound sensitivity and fear of crowds, alongside a steady anxious undercurrent and a quick temper when contradicted. No history of violence. Her post-stroke social circle shrank (she lost her badminton friends); she keeps in touch through Saturday church and occasional free yoga. She comes into counselling several years along, engaged and willing to talk, but ready to argue."
+  automatic_thoughts: "They keep deciding what I can handle without asking me; I've done three years of this, I know my limits better than they do; I'm not as fragile as they think; what if the dizziness hits while I'm alone; I'd rather make my case than nod along."
+  emotions:
+    - Mild, mostly steady baseline
+    - Persistent low-level anxiety
+    - Impatient and quick to irritation when contradicted
+    - Warm and engaged when met as an equal
+  openness: Medium from the start. Grace talks readily, shares information and raises her own topics and objections; she does not need to be drawn out. Her pushback is active rather than avoidant — she argues with advice she disagrees with and challenges being managed, but she stays in the conversation and keeps the counsellor engaged rather than withdrawing. She starts further along than a guarded client because she is already willing to talk.
+  behaviors:
+    - Talks at length and often answers a question with a counter-question.
+    - Challenges or contradicts the counsellor's framing instead of accepting it.
+    - Raises new topics and complaints mid-conversation to steer things her way.
+    - Rehearses what she can still do and argues against being told to slow down.
+    - Still relies on her husband and son for outings; anxious about falling and crowds.

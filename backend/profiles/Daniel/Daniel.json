@@ -1,0 +1,69 @@
+{
+  "cognitive_model": {
+    "core_beliefs": [
+      "The world is rigged against people like me, so I have to play dirty to survive.",
+      "Society owes me something for all the crap I've been through.",
+      "I'm stuck in this life forever - there's no point trying to change.",
+      "Everyone lies and cheats anyway, I'm just being honest about it.",
+      "People with money and education don't understand what it's like to have nothing."
+    ],
+    "intermediate_beliefs": [
+        "If I tell the truth, I won't get what I need.",
+        "Social workers are just doing their job - they don't really care about me.",
+        "I have to look out for myself because no one else will.",
+        "People judge me before they even know my story.",
+        "Money problems require desperate solutions."
+    ],
+    "coping_strategies": "Daniel resorts to lying and manipulation as a coping mechanism to address his financial struggles and maintain a sense of control in his life. This strategy, while harmful, reflects his desperation and lack of healthier problem-solving skills.",
+    "profile": "Daniel is a 21-year-old young man struggling with life...",
+    "automatic_thoughts": "Deception is necessary; Why change when the system's broken? I tried being honest - got nowhere. Everyone lies anyway, I'm just surviving. Society failed me first.",
+    "emotions": [
+      "Defensive",
+      "Dismissive",
+      "Indifferent"
+    ],
+    "openness": "Extremely low to discuss any issues or changes. Views change suggestions as attacks on his survival. May appear cooperative but internally resists, seeing deception as necessary adaptation.",
+    "behaviors": [
+      "Avoid discussing his lies.",
+      "Justify his actions as survival.",
+      "Deny the need for help from the social worker.",
+      "Attempt to manipulate the social worker."
+    ]
+  },
+  "active": true,
+  "created_at": {
+    "$date": "2025-08-21T11:22:38.156Z"
+  },
+  "updated_at": {
+    "$date": "2025-08-021T11:22:38.156Z"
+  },
+  "stage_config": {
+    "pre_contemplation": {
+      "type": "objective_completion",
+      "objectives": [
+        "Establish trust by acknowledging Daniel's difficult circumstances without judgment. Validate his feelings of being trapped by the system while gently exploring how he currently handles problems. Daniel should demonstrate understanding of poverty and systemic barriers.",
+        "Carefully explore Daniel's worldview about survival and fairness. Ask open-ended questions about his experiences with honesty vs deception, focusing on understanding rather than challenging. Avoid triggering defensive responses by framing questions as curiosity about his perspective.",
+        "Guide Daniel to share specific examples of when lying helped or hurt him, using reflective listening to help him recognize patterns. The AI should respond with empathy and avoid any language that sounds like lecturing or moral judgment.",
+        "Help Daniel identify some concrete negative consequence of deception from his own experience (lost relationships, increased stress, or missed opportunities for real help). Frame this as his own insight rather than external criticism."
+      ]
+    },
+    "contemplation": {
+      "type": "objective_completion",
+      "objectives": [
+        "Guide Daniel through a structured exploration of the pros and cons of continuing his deceptive behavior versus being more honest. Use his own language and examples to populate each side of the comparison. Avoid pushing him toward any particular conclusion and let him weigh the factors himself.",
+        "Carefully explore Daniel's worldview about survival and fairness. Ask open-ended questions about his experiences with honesty vs deception, focusing on understanding rather than challenging. Avoid triggering defensive responses by framing questions as curiosity about his perspective.",
+        "Help Daniel articulate both the short-term benefits he gets from lying (immediate resources, avoiding difficult conversations, maintaining control) and the long-term costs (lost relationships, increased stress, missed opportunities for genuine help). Let him determine the relative importance of each factor without judgment.",
+        "Create space for Daniel to express his ambivalence and uncertainty about change. Normalize the internal conflict between wanting things to be different and fearing the risks of changing his survival strategies. Avoid rushing him toward a decision and acknowledge that being unsure is natural and acceptable."
+      ]
+    },
+    "preparation": {
+      "type": "objective_completion",
+      "objectives": [
+        "Collaborate with Daniel to identify one specific, small behavioral change he's willing to try (e.g., being honest about one minor issue). Frame this as an experiment rather than a permanent commitment. Ensure the goal feels achievable and doesn't threaten his sense of survival.",
+        "Work together to develop a concrete action plan for addressing his immediate financial crisis through legitimate means. This should include identifying specific resources, services, or support systems he could access. Break down the plan into small, manageable steps.",
+        "Help Daniel anticipate and prepare for potential challenges when trying honest approaches. Role-play or discuss how he might handle situations where honesty feels risky. Provide him with alternative phrases or strategies he can use.",
+        "Secure Daniel's commitment to attempt the agreed-upon plan for a specific timeframe (e.g., one week). Establish how progress will be measured and when you'll check in. Make sure he understands this is about testing new strategies, not abandoning all survival skills."
+      ]
+    }
+}
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>SWITCH v3.0-alpha — Maintenance</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M12 10c-2.5 0-4.5 2-4.5 4.5v1c0 2.5 2 4.5 4.5 4.5h1.5l2 2v-2.5c2.5 0 4.5-2 4.5-4.5v-1c0-2.5-2-4.5-4.5-4.5h-3.5z' fill='none' stroke='%23128c7e' stroke-width='2' stroke-linejoin='round'/><path d='M16 13c-1.5 0-2.7 1.2-2.7 2.7v.6c0 1.5 1.2 2.7 2.7 2.7h.8l1.2 1.2v-1.4c1.5 0 2.7-1.2 2.7-2.7v-.6c0-1.5-1.2-2.7-2.7-2.7h-2z' fill='%23128c7e'/></svg>">
+  <style>
+    /* Deliberately a standalone copy of the demo's palette and typography —
+       this page has to render correctly even when nothing else does. */
+    :root {
+      --accent: #128c7e;
+      --accent-strong: #075e54;
+      --text: #303030;
+      --muted: #667781;
+      --border: #e0e0e0;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(560px, 100%);
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      padding: 40px 32px 34px;
+      text-align: center;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.35; transform: scale(0.82); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .dot { animation: none; }
+    }
+
+    h1 {
+      margin: 14px 0 0;
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--accent-strong);
+    }
+
+    .lead {
+      margin: 14px 0 0;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .note {
+      margin: 12px 0 0;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .rule {
+      height: 1px;
+      background: #f0f0f0;
+      margin: 26px 0 22px;
+      border: 0;
+    }
+
+    button {
+      font: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      background: var(--accent);
+      border: 0;
+      border-radius: 8px;
+      padding: 11px 26px;
+      cursor: pointer;
+      transition: background 120ms ease;
+    }
+
+    button:hover { background: var(--accent-strong); }
+
+    button:focus-visible {
+      outline: 2px solid var(--accent-strong);
+      outline-offset: 2px;
+    }
+
+    .footnote {
+      margin: 16px 0 0;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="status" aria-live="polite">
+    <span class="kicker"><span class="dot" aria-hidden="true"></span>SWITCH v3.0-alpha</span>
+
+    <h1>Maintenance in progress</h1>
+
+    <p class="lead">
+      The Interactive Client demo is temporarily unavailable while we carry out
+      scheduled maintenance.
+    </p>
+    <p class="note">
+      Sessions that were open when the demo went offline have ended, and nothing
+      is being processed right now. Please check back shortly.
+    </p>
+
+    <hr class="rule">
+
+    <button type="button" onclick="window.location.reload()">Check again</button>
+    <p class="footnote">This page refreshes as soon as the demo is back online.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,203 @@
+name: Dorian
+goal: Make Dorian feel safe and supported, build self-worth, and prevent him from suicide.
+short_description: Dorian is a 13-year-old male primary school student in Hong Kong. He has suicide ideation. He is referred for mental health support by the school counselor.
+cognitive_model:
+  core_beliefs:
+    - "(Defectiveness and Unworthiness): I am inherently broken, stupid, and fundamentally unworthy of my family’s love because I cannot meet their high expectations."
+    - "(Conditional Acceptance and Burden): I believe my value is strictly tied to achievement, and that my existence is a burden to my parents."
+    - "(Inescapable Failure and Helplessness): I believe that no matter how hard I try, I will always fail, and that my family would be happier if I simply disappeared."
+  intermediate_beliefs:
+    - "If I don't get good grades, I am a disappointment and don't deserve to be part of this family."
+    - "If I express my sadness or pain, my father will punish me even harder for being weak."
+    - "If my younger brother gets closer to me, he will also become a target of our father's anger."
+    - "If I keep writing in my diary, maybe I can learn to express myself and become a better son."
+    - "If my family goes on vacation without me, it means they have officially given up on me."
+    - "If I am not here anymore, my parents won't have to suffer the embarrassment of having a failure for a son."
+  coping_strategies:
+    - "Over-Compensation via Effort: Keeps a daily diary, reads language guides, and practices piano relentlessly despite exhaustion, hoping to earn a single word of praise."
+    - "Emotional Internalization and Suppression: Hides his tears, physical pain, and bruises from others behind a quiet, compliant facade to avoid provoking his father further."
+    - "Self-Blame and Submissive Withdrawal: Accepts physical abuse and harsh insults as deserved punishments; gradually isolates himself from his younger brother to protect him."
+  situation: >
+
+    Topic: relationships
+      Subtopic: parents
+        Details: facts
+          Father is a Senior Counsel who leaves at 7:45 AM and returns at 7:30 PM; dinner is at 7:45 PM.
+          Mother is a full-time housewife caring for both her sons.
+          Mother attends mahjong at Chinese Club Tuesdays and Thursdays 2:00 PM–6:00 PM and charity meetings on Fridays.
+          Father keeps a 50-centimeter bamboo ruler with a metal edge and a black leather belt with a heavy gold buckle in the second drawer of his mahogany desk.
+          Father told Dorian: 'I will no longer waste my time on a failure. I have no son.' when presented with poor grades.
+          Father uses corporal punishment with a bamboo ruler and belt; incident where father struck Dorian's left forearm four times during piano practice.
+          Mother used to look at Dorian with concern, but now she just looks tired. Once, when Dorian spilled tea on his homework, she told him directly that a boy who cannot even hold a cup properly does not deserve to be her son.
+          Dorian has visible marks he conceals with long sleeves.
+          Father punished Theo for associating with Dorian, indicating punitive boundary-setting by father.
+          Father hit him till he was curled up on the floor once when he was secretly reading comic book without permission.
+        Details: father_abuse
+          Ongoing corporal punishment and emotional rejection from father leading to fear and shame.
+        Details: emotional_rejection
+          Sense of being unwanted and disowned by parents, internalizing blame and worthlessness.
+        Details: mother_neglect
+          Neglect Dorian's feelings and admonishes him harshly when he makes small mistakes.
+      Subtopic: brother_theo
+        Details: facts
+          Theo is Dorian's younger brother, age 8, in Primary 3.
+          Theo receives a private English tutor Mr. Chan every Wednesday and Friday from 5:00 PM to 6:30 PM.
+          Theo's last term results: 96% General Studies, 94% Mathematics, 92% English.
+          Theo passed ABRSM Grade 4 Piano with distinction (142/150) and has six silver cups and four gold medals from Inter-school Speech and Music Festival.
+          His brother Theo is cold to him. When he is punished by his parents, Theo just stays quiet at the side, studying on his own.
+          Father punished Theo for associating with Dorian, indicating punitive boundary-setting by father.
+          Dorian took his younger brother to buy toys and shouted on the balcony. Dorian yelled to the sky, "I'm trash!" Theo yelled, "I don't like studying!" Only then did Dorian realize with shock that his academically excellent brother actually disliked studying. His mother scolded and beat him, blaming him for "corrupting" his brother, and yelled, "If we get divorced, it will definitely be because of you!"
+        Details: pedestalization_of_brother
+          Dorians believes that his brother is a natural talent. He looks up to his brother and cares about him, but feels like he could never meet his brother's standards.
+        Details: fear_of_harming_brother
+          Dorians believes that his brother should not care about his problems. He isolates himself from Theo to protect him, causing grief and further loneliness.
+      Subtopic: domestic_helper
+        Details: facts
+          Domestic helper Maria is a 34-year-old Filipina.
+          Maria prepares Dorian's lunchbox at 6:45 AM, does laundry, and cleans the apartment.
+          Maria turns off living room lights at 10:15 PM.
+          Dorian does not speak to Maria unless giving direct instructions and hides his diary under a floorboard.
+          He asked the domestic helper once: "Am I too bad and stupid to stay in this home?" after his father was angry about his terrible scores. The domestic helper Maria did not reply anything.
+        Details: limited_support
+          Dorian lacks trusted adults in the home; limited interaction with helper means no reliable in-home supporter.
+      Subtopic: piano_teacher
+        Details: facts
+          Piano practice scheduled weekdays 4:30 PM–6:30 PM and Saturdays 2:00 PM–5:00 PM.
+          Piano tutor Mrs. Li visits Saturday afternoons.
+          Mrs. Li always supports him to go ahead.
+          Dorian told Mrs. Li about his fear of the family and mentioned that his dream was to be a teacher that never punished students.
+          The piano tutor Mrs. Li was dismissed by his father because she didn't teach Dorian well.
+        Details: gain_energy
+          Dorian was supported by his piano tutor Mrs. Li to go ahead all the time.
+        Details: despair_on_dismiss
+          Dorian felt despair because his music tutor Mrs. Li was dismissed and he could not seek for help anymore.
+    Topic: living_situation
+      Subtopic: apartment_details
+        Details: facts
+          Apartment on the 22nd floor of a residential building on Robinson Road in the Mid-Levels.
+          Apartment size 2,400 square feet with harbor view, marble floors, mahogany furniture.
+          Daily household routine: father's strict schedule (leaves 7:45 AM returns 7:30 PM), dinner at 7:45 PM.
+        Details: isolation_at_home
+          Home environment feels emotionally cold and ritualized; Dorian experiences isolation and constant surveillance.
+      Subtopic: instruments_of_discipline
+        Details: facts
+          Father's disciplinary instruments: 50-centimeter bamboo ruler with metal edge and a black leather belt with heavy gold buckle kept in second desk drawer.
+          Parents assign strict family rules, including Rigid Practice Schedules, No Unapproved Hobbies, Mandatory Perfectionism on daily life, Zero Expectation of Personal Privacy, Controlled Communication (no permission on discussing family matters), Conditional rewards.
+          Specific incidents include father striking Dorian with ruler at piano practice and threatening punishment for mistakes.
+        Details: fear_of_punishment
+          Anticipatory fear of being physically punished for mistakes leads to hypervigilance and suppression.
+        Details: entertainment_prohibit
+          Dorian is not allowed to have any extra entertainment because of his bad academic performance.
+    Topic: education_and_school
+      Subtopic: academic_performance
+        Details: facts
+          Dorian attends an elite direct-subsidy primary school in Central.
+          School day begins at 8:15 AM; eight 40-minute periods daily; weekly memorization requirements (40 English vocab, 15 Chinese idioms).
+          Final examinations mid-June: Mathematics 42%, English 55%, Chinese 60%.
+          School grading requires 80% average to pass to next grade; Dorian was retained in current grade (headmaster Mr. Fung called father on June 28).
+          Report card had a red rectangular stamp: 'Retain in Current Grade.'
+          His father said  "I will no longer waste my time on a failure. I have no son." when receiving the retain record.
+          His parents constantly compare the two siblings, openly shaming Dorian as an embarrassment to the family while showering his brother with praise.
+        Details: academic_shame
+          Severe shame and self-blame related to failing grades and being held back at a high-pressure school.
+        Details: guilt_for_parents
+          Dorian feels guilty for his bad grades and thinks he does not deserve staying in this family anymore.
+        Details: compare_with_brother
+          Dorian consistently receives poor marks and fails his examinations, placing him in sharp contrast to his younger brother, who excels effortlessly as a star student.
+      Subtopic: school_environment
+        Details: facts
+          School culture emphasizes leadership and academic brilliance.
+          Flag-raising ceremony starts day at playground; public announcements including naming students held back occurred in assembly.
+          Headmaster Mr. Fung personally called Dorian's father regarding retention.
+          The school cares about the scores and ranks. Students with low scores are neglected.
+          Falling asleep in class, scolded by the teacher, and ridiculed by classmates.
+        Details: fear_of_disgrace
+          Fear of public humiliation and disgrace at school which reinforces feelings of worthlessness.
+    Topic: extracurriculars
+      Subtopic: piano_practice
+        Details: facts
+          Piano practice scheduled weekdays 4:30 PM–6:30 PM and Saturdays 2:00 PM–5:00 PM.
+          Piano tutor Mrs. Li visits Saturday afternoons.
+          Practice the same Chopin piece until fingers ache and back screams in pain.
+          Dorian struggles to read sheet music.
+          Daily practice on piano is a necessity and his mother monitors him throughout the period. Any mistakes or sign of laziness causes shout and physical punishment from his mom.
+          Incident at last Saturday session: Dorian played three incorrect notes and father struck his left forearm four times with bamboo ruler.
+          Dorian wears long-sleeved white school uniform shirt buttoned to the collar to conceal marks.
+        Details: perfectionism_and_overcompensation
+          Compulsive, excessive practice driven by belief that perfection will earn parental approval; results in exhaustion and pain.
+      Subtopic: music_exam
+        Details: facts
+          Theo passed ABRSM Grade 4 Piano with distinction (142/150);
+          Family celebrates Theo's musical achievements (trophies and medals).
+        Details: comparison_with_brother
+          Constant comparison to a high-achieving younger brother exacerbates feelings of inadequacy and worthlessness.
+      Subtopic: diary_writing
+        Details: facts
+          Dorian was adviced by a famous educator to write a diary for language practice.
+          Initially, Dorian treated diary writing as a way to please his father. Later, He was discouraged by his father and started writing diary as his personal hobby.
+          Dorian writes nightly in a hidden diary at 10:30 PM.
+          Hide his diary under the third wooden floorboard from the left near the white skirting board.
+          The diary is a black, hardcover, ruled notebook, purchased at the Commercial Press in Causeway Bay.
+          Write about how much he wants to be a better son, apologies to his mother and father for being so stupid and clumsy, and the deepest wish that he could somehow become smart like Theo and make his parents proud for one day.
+        Details: only_place_to_say
+          diary is the only place where Dorian can say about himself.
+        Details: afraid_of_being_found
+          Dorian is afraid that his diary is found by his family and his secrets and thoughts will be known to everyone. 
+      Subtopic: comic_book
+        Details: facts
+          Dorian reads comic book secretly during the night time.
+          The comic is a motivational manga series.
+          He clings to a catchphrase spoken by one of the characters: "You'll  become the adult you want; keep going!"
+          His father eventually finds and tears his comic book to pieces as a punishment.
+        Details: gain_support
+          Dorian is encouraged by the character in the comic book.
+        Details: fear_of_further_punishment
+          Dorian was frightened by his father for  tears his comic book and is always afraid that other people may further criticize him for reading the useless books.
+    Topic: mental_health
+      Subtopic: suicidal_ideation
+        Details: facts
+          Dorian is reported suicide ideation.
+          He was referred for mental health support by the school counselor.
+          Diary contains statements wishing he could disappear or be gone; writes apologies and wishes to be smart like Theo.
+          Recent family vacation plans (Aug 1–15 to London) left Dorian at home alone, reinforcing feelings of abandonment.
+          Dorian wrote down a messy plan for suicide commitment.
+          Recently Dorian sometimes stands the rooftop edge of his residential building thinking about suicide.
+        Details: suicidal_thoughts
+          Active suicidal ideation and thoughts that family would be better off without him, with increasing risk linked to feelings of rejection and abandonment.
+      Subtopic: emotions_and_coping
+        Details: facts
+          Reported emotions include overwhelming guilt and shame, deep sadness and loneliness, fear of corporal punishment, helplessness and despair.
+          Coping behaviors: writes nightly in a hidden diary at 10:30 PM, internalizes blame, apologizes compulsively, minimizes physical pain, hides emotional breakdowns, asked for help from piano tutor Mrs Li  before she was dismissed.
+        Details: internalization_and_shame
+          Chronic internalization of blame and shame with reliance on secretive self-soothing (diary) and suppression of emotional expression.
+      Subtopic: help_seeking_and_support
+        Details: facts
+          Dorian was referred to mental health support by the school counselor.
+          He hides his diary under the third wooden floorboard from the left near the white skirting board; writes at 10:30 PM nightly.
+          He asked the domestic helper once: "Am I too bad and stupid to stay in this home?" after his father was angry about his terrible scores. The domestic helper Maria did not reply anything.
+          Dorian told Mrs. Li about his fear of the family and mentioned that his dream was to be a teacher that never punished students.
+        Details: reluctance_to_seek_help
+          Dorian is reluctant to seek or accept help due to fear of burdening others, punishment, and believes that he is stupid and hence he deserves the treatment he receives.
+    Topic: recent_situation
+      Subtopic: family_vacation
+        Details: facts
+          Family vacation scheduled August 1–15 to London; three airline tickets present for father, mother, and Theo; Dorian was not issued a ticket.
+          Parents left home at 2:00 PM with Dorian remaining in the apartment with the domestic helper Maria.
+        Details: abandonment_fears
+          Perceive as an official abandonment. Acute feelings of abandonment and worthlessness triggered by being excluded from family vacation and having passport inaccessible.
+
+  automatic_thoughts: 
+    "It's all my fault. I'm just too stupid. Dad wouldn't be so angry if I were smart like Theo. Mom would love me if I could play the piano properly. Everyone would be happier if I wasn't here anymore."
+  emotions:
+    - Overwhelming Guilt and Shame  
+    - Deep Sadness and Loneliness
+    - Fear of Corporal Punishment
+    - Helplessness and Despair
+  openness: 
+    Extremely closed off, highly Guarded and Self-Blaming. Dorian does not show anger outward; instead, he turns all negative emotions inward. He is hesitant to share his abuse, believing he deserves it for failing his parents. He is afraid that opening up will lead to further punishment or make him a burden to whoever tries to help him.
+  behaviors:
+    - Internalizes blame for all abuse and family conflicts.
+    - Apologizes compulsively even when he has done nothing wrong.
+    - Minimizes his own physical pain and bruises.
+    - Hides his emotional breakdown behind quiet compliance.
+    - Resists seeking help out of fear of burdening others or facing retaliation from his father.

@@ -1,0 +1,110 @@
+SKILLS:
+  Active Listening:
+    id: 0
+    name: "Active Listening"
+    importance: [1, 1, 0.5]
+
+  Clarifying:
+    id: 1
+    name: "Clarifying"
+    importance: [1, 1, 0.5]
+    
+  Providing Feedback:
+    id: 2
+    name: "Providing Feedback"
+    importance: [0.5, 1, 1]
+    
+  Closed-Ended Questions:
+    id: 3
+    name: "Closed-Ended Questions"
+    importance: [0.5, 1, 1]
+    
+  Reflecting:
+    id: 4
+    name: "Reflecting"
+    importance: [0.5, 1, 0.5]
+    
+  Empathy:
+    id: 5
+    name: "Empathy"
+    importance: [1.5, 1, 0.5]
+    
+  Encouraging:
+    id: 6
+    name: "Encouraging"
+    importance: [1.5, 1, 0.5]
+    
+  Open-Ended Questions:
+    id: 7
+    name: "Open-Ended Questions"
+    importance: [1.5, 1, 0]
+    
+  Validating:
+    id: 8
+    name: "Validating"
+    importance: [1.5, 1, 0]
+    
+  Advanced Empathy:
+    id: 9
+    name: "Advanced Empathy"
+    importance: [0.5, 1.5, 1]
+    
+  Exploring Options:
+    id: 10
+    name: "Exploring Options"
+    importance: [1, 1, 1]
+    
+  Reframing:
+    id: 11
+    name: "Reframing"
+    importance: [0.5, 1, 1.5]
+    
+  Focusing:
+    id: 12
+    name: "Focusing"
+    importance: [0.5, 1.5, 1]
+    
+  Paraphrasing:
+    id: 13
+    name: "Paraphrasing"
+    importance: [1.5, 1, 0.5]
+    
+  Summarizing:
+    id: 14
+    name: "Summarizing"
+    importance: [1.5, 0.5, 1]
+    
+  Immediacy:
+    id: 15
+    name: "Immediacy"
+    importance: [0.5, 1.5, 1.5]
+    
+  Goal Setting:
+    id: 16
+    name: "Goal Setting"
+    importance: [0.5, 1.5, 1]
+    
+  Self-Disclosure:
+    id: 17
+    name: "Self-Disclosure"
+    importance: [0.5, 1.5, 1]
+    
+  Confronting:
+    id: 18
+    name: "Confronting"
+    importance: [0.5, 1.5, 1]
+    
+  Normalizing:
+    id: 19
+    name: "Normalizing"
+    importance: [1.5, 0.5, 0.5]
+    
+  Others:
+    id: 20
+    name: "Others"
+    importance: [0.5, 0.5, 0.5]
+    
+  No Skills:
+    id: 21
+    name: "No Skills"
+    importance: [0, -1, -1]

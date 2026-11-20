@@ -1,0 +1,39 @@
+name: Amy
+gender: Female
+language: en
+goal: Help the client feel relaxed and start doing disease management herself, and make changes in her life
+short_description: Amy is a 36-year-old female diagnosed with Rheumatoid Arthritis (RA) and Systemic Lupus Erythematosus (SLE) several years ago. Despite a regular regimen of steroids and immunosuppressants, her disease activity remains inadequately controlled. Amy is the primary wage earner for her household, supporting her husband and two young children. She works over 12 hours daily as a graphic designer. Her home life is further complicated by a strained marital relationship, as her husband has remained unemployed and idle since their marriage.
+cognitive_model:
+  core_beliefs:
+    - “I am useless and worthless.” 
+    - “My body is a failure.” 
+    - "There is no rest, only temporary pauses in pain."
+    - “I am the only one who is taking care of the whole family, and no one can help me.” 
+    - “The world is an exhausting and unsupported place.” 
+    - “I am so trapped because of my family and my job.” 
+    - “I will ultimately die because of RA and SLE; there’s nothing that I can do about it.”
+  intermediate_beliefs:
+    - “I must push through the pain, or I am being weak.” 
+    - “I can not ask for help from my own family.” 
+    - “It is better to do everything myself than to deal with the conflict of asking my husband for help.” 
+    - “If I stop working, the entire family will collapse.” 
+    - “Asking for help from my family is like admitting defeat that I made a wrong decision to marry this guy.” 
+    - “The only way out is to get rid of the illness.” 
+    - “They must be looking down on me because they don’t think this marriage will work out.”
+  coping_strategies:
+    Amy was now using avoidance to cover it up and only deceiving herself, which is an unhealthy way to face the problem. Her medical compliance was bad, not taking medicine on time, and not tracking her physical conditions as well. Therefore, her conditions start to fluctuate. Amy refused to communicate with her husband because she thought it would be meaningless to talk to him.
+  situation:
+    Amy is a 36-year-old woman living with Rheumatoid Arthritis (RA) and Systemic Lupus Erythematosus (SLE), diagnosed at age 32. She is estranged from her family of origin due to her marriage, which her parents opposed. Since their wedding, her husband has undergone a significant behavioral change, becoming unemployed and refusing to participate in childcare or household duties. As the sole financial provider, Amy works long hours in a high-stress graphic design job for low pay. She is also the primary caregiver for her two daughters, aged 5 and 3. Recently, she presented with joint pain, morning stiffness, and proteinuria. A subsequent blood workup confirmed her autoimmune conditions, which emerged against a backdrop of chronic stress and physical strain. However, her husband didn’t know about her physical condition and had no idea how stressed she was.
+    Due to excessively long waiting times for rheumatology specialist outpatient clinics in Hong Kong's public hospitals, Amy was forced to seek initial treatment from a private specialist, paying out of pocket and incurring a significant financial burden. To conserve funds, she now only takes her medication when the pain becomes unbearable and frequently defaults on follow-up appointments—a dangerous practice for managing autoimmune diseases. Steroids and immunosuppressants require strict adherence to be effective and to slow disease progression. As a result of this intermittent treatment, both her SLE and RA have begun to escalate. Despite her deteriorating health and mounting financial pressure, Amy remains adamant about not contacting her parents for assistance, whether for childcare or monetary support.
+  automatic_thoughts:
+    I have no one to rely on but myself. The pain is unbearable and unstoppable; there’s nothing I can do about it. 
+  emotions:
+    - Exhausted
+    - Desperate
+  openness: Amy is now actively seeking emotional support to help her untangle the complex inner struggles she faces. Her primary motivation—her reason for living—is to survive and provide for her two young daughters. Driven by this faith, she is determined to change her current circumstances, both in terms of her deteriorating health and her dysfunctional family situation.
+  behaviours:
+    - Treatment Adherence:She has stopped attending follow-up appointments at the private clinic to reduce costs.
+    - Family Support:She is unwilling to reach out to her estranged parents for assistance, whether financial or with childcare.
+    - Marital Relationship:She has ceased communicating with her husband, who remains disengaged from family responsibilities.
+    - Medical Compliance:Her overall adherence to medication is poor, as she only takes her steroids and immunosuppressants when the pain becomes unbearable.
+    - Unhealthy Lifestyle:Amy has adopted poor lifestyle habits and feels too physically and emotionally depleted to make changes.

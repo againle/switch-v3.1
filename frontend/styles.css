@@ -1,0 +1,524 @@
+:root {
+  color-scheme: light;
+  --bg: #efeae2;
+  --chat-bg: #fff8df;
+  --panel: #ffffff;
+  --border: #e0e0e0;
+  --text: #303030;
+  --muted: #667781;
+  --accent: #128c7e;
+  --accent-strong: #075e54;
+  --user-bubble: #dcf8c6;
+  --user-bubble-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+  --assistant-bubble: #ffffff;
+  --assistant-bubble-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  /* Height of the on-screen keyboard on browsers that overlay it instead of
+     resizing the layout viewport (iOS). Written by app.js from the
+     visualViewport API; stays 0 everywhere else. */
+  --kb-inset: 0px;
+}
+
+* { box-sizing: border-box; }
+
+/* Utility class for elements that stay in the DOM (so the scripts that
+   toggle them keep working) but must not be shown. */
+.hidden { display: none !important; }
+
+/* App shell: the page itself never scrolls (the chat log and the sidebar scroll
+   internally), which stops iOS from leaving the layout viewport scrolled or
+   expanded after the on-screen keyboard closes. text-size-adjust keeps Safari
+   from inflating text when the phone rotates to landscape. */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 0;
+  height: 100vh;
+  height: 100dvh;   /* phone: exclude the browser chrome */
+  overflow: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: var(--panel);
+  border: none;
+}
+
+/* ── sidebar ─────────────────────────────────────────────── */
+.sidebar {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-right: 1px solid var(--border);
+  /* Translucent so the conversation stays faintly visible behind the panel;
+     the blur keeps the text readable over whatever is behind it. */
+  background: rgba(247, 247, 247, 0.82);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  overflow-y: auto;
+}
+
+.brand h1, .chat-header h2 { margin: 0; line-height: 1.15; }
+.brand h1 { font-size: 22px; margin-top: 4px; color: var(--accent-strong); }
+.brand p, .description { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+
+.brand-kicker {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent);
+}
+
+.field-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--accent); font-weight: 600;
+}
+
+select, input, button { font: inherit; }
+
+select, input {
+  width: 100%; border: 1px solid var(--border); border-radius: 8px;
+  background: #fff; color: var(--text); outline: none; padding: 12px 14px;
+  font-size: 14px;
+}
+
+select { padding-right: 32px; }
+
+select:focus, input:focus { border-color: var(--accent); }
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Session report download — pinned to the bottom of the sidebar. The
+   sidebar is a flex column, so an auto top margin absorbs the slack and
+   keeps the button at the foot instead of floating under the cards. */
+.save-pdf-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+button {
+  border: 0; border-radius: 8px; padding: 11px 16px; cursor: pointer;
+  font-size: 14px; font-weight: 500;
+  transition: background 120ms ease;
+}
+
+.primary {
+  background: var(--accent); color: #fff; font-weight: 600;
+}
+.primary:hover { background: var(--accent-strong); }
+
+.secondary {
+  background: #fff; color: var(--accent); border: 1px solid var(--border);
+}
+.secondary:hover { background: #f0f2f5; }
+
+button:disabled, input:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* ── status cards ────────────────────────────────────────── */
+.status-card {
+  border-radius: 10px; padding: 14px;
+  background: #fff; border: 1px solid var(--border);
+}
+.status-card.subtle { background: #fafafa; }
+
+.status-row {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 7px 0; border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+}
+.status-row:last-child { border-bottom: 0; }
+.status-row span { color: var(--muted); }
+.status-row strong, .status-row a { color: var(--text); text-decoration: none; }
+.status-row a { color: var(--accent); }
+
+/* Graph session id — monospace, truncated to the sidebar width, click to
+   copy the full id. */
+.copy-id {
+  max-width: 160px;
+  padding: 0 0 1px;
+  border: 0;
+  border-bottom: 1px dashed var(--border);
+  background: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  color: var(--text);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.copy-id:hover:not(:disabled) { color: var(--accent); border-bottom-color: var(--accent); }
+.copy-id.copied {
+  color: var(--accent);
+  border-bottom-color: transparent;
+  font-family: inherit;
+  font-size: 12.5px;
+}
+
+/* ── chat panel ──────────────────────────────────────────── */
+.chat-panel {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  height: 100dvh;   /* phone: keep the composer above the browser chrome */
+  overflow: hidden;
+}
+
+/* ── phone drawer ────────────────────────────────────────── */
+/* The hamburger, the drawer's close button and the backdrop only exist in
+   the phone layout — the media query below shows them and turns the sidebar
+   into an off-canvas drawer. */
+.nav-toggle, .nav-close, .scrim { display: none; }
+
+.header-left {
+  display: flex; align-items: center; gap: 12px;
+  min-width: 0;
+}
+.header-left h2 {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+.chat-header {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 14px; padding: 14px 20px;
+  background: #f0f2f5; border-bottom: 1px solid var(--border);
+}
+
+.header-right {
+  display: flex; align-items: center; gap: 10px;
+}
+
+.badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 80px; padding: 6px 12px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 10px;
+  font-weight: 600;
+}
+.badge.muted { background: #e9edef; color: var(--muted); }
+.badge.live { background: #d9fdd3; color: #1b8a26; }
+
+.badge-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 64px; padding: 6px 12px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px;
+  font-weight: 600; cursor: pointer; border: 1px solid var(--border);
+  background: #fff; color: var(--accent);
+  transition: background 120ms ease;
+}
+.badge-btn:hover { background: #f0f2f5; }
+.badge-btn.hidden { display: none; }
+
+/* ── chat log ────────────────────────────────────────────── */
+.chat-log {
+  overflow: auto;
+  /* Lets this grid row shrink when the keyboard takes height away, instead of
+     refusing to shrink and pushing the composer out of the panel. */
+  min-height: 0;
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 16px 20px;
+  background: var(--chat-bg);
+  /* subtle wallpaper pattern */
+  background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1.2px, transparent 1.2px);
+  background-size: 16px 16px;
+}
+
+.message {
+  max-width: 72%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.45;
+  position: relative;
+  word-wrap: break-word;
+  animation: bubble-in 280ms ease-out;
+}
+
+@keyframes bubble-in {
+  0% { opacity: 0; transform: translateY(10px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.message.user {
+  align-self: flex-end;
+  background: var(--user-bubble);
+  box-shadow: var(--user-bubble-shadow);
+  border-top-right-radius: 2px;
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: var(--assistant-bubble);
+  box-shadow: var(--assistant-bubble-shadow);
+  border-top-left-radius: 2px;
+}
+
+/* Continuation chunks of a long reply — sit closer together so the
+   bubble stack reads as one person typing several short messages. */
+.message.chunk {
+  margin-top: -3px;
+  border-top-left-radius: 8px;
+}
+
+/* System notices (command results such as /reset) — not a bubble from
+   either speaker, so no background and centred. */
+.message.system {
+  align-self: center;
+  max-width: 88%;
+  background: transparent;
+  box-shadow: none;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+  padding: 4px 8px;
+}
+.message.system .message-time { display: none; }
+
+/* Session dividers — a grey pill centred in the log (WhatsApp's date-label
+   style) marking when the client entered the chat and when the connection
+   dropped. Not a bubble from either speaker, so it has no speaker styling. */
+.session-note {
+  align-self: center;
+  max-width: 88%;
+  padding: 4px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.08);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  animation: bubble-in 280ms ease-out;
+}
+
+/* Client behaviours (Tier-1 BEHAVIOUR actions such as "goes offline" or
+   "starts typing then stops") are internal cues and are never rendered in the
+   chat log — see the assistant_message handler in app.js. */
+
+.message-body {
+  white-space: pre-wrap;
+}
+
+.message-time {
+  text-align: right;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ── thinking dots — WhatsApp typing bubble ─────────────── */
+.thinking-dots {
+  align-self: flex-start;
+  display: flex; align-items: center; gap: 5px;
+  padding: 10px 16px;
+  background: var(--assistant-bubble);
+  box-shadow: var(--assistant-bubble-shadow);
+  border-radius: 8px;
+  border-top-left-radius: 2px;
+  margin-top: 2px;
+  animation: bubble-in 280ms ease-out;
+}
+.thinking-dots:not(.hidden) { opacity: 1; }
+.thinking-dots.hidden { display: none; }
+
+.thinking-dots span {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #b0b8bf;
+  display: inline-block;
+  animation: wa-bounce 1.4s infinite ease-in-out;
+}
+.thinking-dots span:nth-child(2) { animation-delay: 0.2s; }
+.thinking-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes wa-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-5px); background: var(--accent); }
+}
+
+/* ── composer ────────────────────────────────────────────── */
+.composer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  /* The bottom padding carries `--kb-inset` so the composer stays visible when
+     the browser overlays the keyboard rather than resizing the layout (iOS).
+     Because the row is then already clear of the keyboard, the browser has no
+     reason to scroll the page to reveal the focused input — which is what
+     used to drag the app bar off the top of the screen. */
+  padding: 12px 16px calc(12px + var(--kb-inset, 0px));
+  background: #f0f2f5;
+}
+
+.composer input {
+  padding: 12px 16px; border-radius: 24px;
+}
+
+.composer button {
+  padding: 10px 24px; border-radius: 24px;
+  background: var(--accent); color: #fff; font-weight: 600;
+}
+
+/* ── touch devices ──────────────────────────────────────── */
+/* iOS/Android zoom the page in when a focused form control's text is smaller
+   than 16px, and the page *stays* zoomed once the keyboard is dismissed —
+   which is why focusing the composer made the whole layout look enlarged.
+   16px is the threshold that suppresses it, and unlike `user-scalable=no`
+   it leaves pinch-zoom available.
+
+   Gated on the pointer type rather than the width because a phone in
+   landscape can be wider than the phone breakpoint and would still zoom. */
+@media (pointer: coarse) {
+  select, input { font-size: 16px; }
+
+  /* Drops the ~300 ms double-tap-zoom delay on taps. */
+  button, select, input, .nav-toggle, .nav-close { touch-action: manipulation; }
+}
+
+/* ── responsive / phone ─────────────────────────────────── */
+@media (max-width: 980px) {
+  .shell {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: none;
+  }
+
+  /* The sidebar slides in over the conversation instead of stacking above it,
+     so the chat always gets the full screen. */
+  .sidebar {
+    position: fixed;
+    top: 0; bottom: 0; left: 0;
+    width: min(86vw, 340px);
+    z-index: 40;
+    padding-top: 58px;                 /* clears the close button */
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.22);
+    transform: translateX(-102%);
+    transition: transform 220ms ease;
+    will-change: transform;
+  }
+  .sidebar.open { transform: translateX(0); }
+
+  .nav-toggle {
+    display: inline-flex;
+    flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+    width: 42px; height: 42px; padding: 0; flex: none;
+    /* Ghost icon button: a bordered box sitting next to the title read as a
+       second primary action and made the bar look cluttered. */
+    border: 0; border-radius: 12px;
+    background: transparent; color: var(--accent-strong);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-toggle:active { background: rgba(0, 0, 0, 0.07); }
+  .nav-toggle span {
+    display: block; width: 20px; height: 2px; border-radius: 2px;
+    background: currentColor;
+  }
+
+  /* "CONVERSATION" is decorative: next to the client's own name and the menu
+     button it was the third thing competing for one narrow row. */
+  .header-left .brand-kicker { display: none; }
+
+  .nav-close {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    position: absolute; top: 14px; right: 14px;
+    width: 36px; height: 36px; padding: 0;
+    border: 1px solid var(--border); border-radius: 10px;
+    background: #fff; color: var(--muted);
+    font-size: 16px; line-height: 1; cursor: pointer;
+  }
+
+  .scrim {
+    display: block;
+    position: fixed; inset: 0; z-index: 30;
+    background: rgba(12, 32, 30, 0.38);
+    opacity: 0; pointer-events: none;
+    transition: opacity 220ms ease;
+  }
+  .scrim.visible { opacity: 1; pointer-events: auto; }
+
+  .message { max-width: 88%; }
+
+  /* Same 16px threshold as the touch-device block above, repeated here so a
+     browser reporting a fine pointer (e.g. a phone in "desktop site" mode)
+     still gets it at phone widths. */
+  select, input { font-size: 16px; }
+}
+
+/* ── phone app bar ──────────────────────────────────────── */
+/* The header had three competing elements on one narrow row (menu button,
+   section kicker, client name) plus a full-width status pill. On a phone it
+   is now a single-purpose app bar — menu button + name — with the pill
+   collapsed to a status dot. */
+@media (max-width: 720px) {
+  .chat-header {
+    gap: 6px;
+    padding: 8px 10px;
+    /* clear the status bar / notch when launched from the home screen */
+    padding-top: calc(8px + env(safe-area-inset-top));
+  }
+  .header-left { flex: 1 1 auto; min-width: 0; gap: 4px; }
+  .header-left h2 { font-size: 16px; line-height: 1.2; }
+
+  .header-right { flex: none; gap: 8px; }
+
+  /* Connection pill → status dot. `display: block` + clip keeps the label in
+     the accessibility tree, so screen readers still announce the state. */
+  .badge {
+    display: block;
+    width: 10px; height: 10px; min-width: 0; padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    color: transparent;
+    text-indent: -9999px;
+    flex: none;
+  }
+  .badge.muted { background: #c3c9cc; }
+  .badge.live {
+    background: #25b62f;
+    box-shadow: 0 0 0 3px rgba(37, 182, 47, 0.16);
+  }
+
+  .badge-btn { min-width: 0; padding: 6px 10px; }
+}
+
+/* Extra room for thumbs on an actual phone. */
+@media (max-width: 560px) {
+  .chat-log { padding: 12px 14px; }
+  .composer {
+    /* keep the send button clear of the home indicator on notched phones, and
+       of the keyboard when the browser overlays it */
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom) + var(--kb-inset, 0px));
+    gap: 8px;
+  }
+  .composer button { padding: 10px 18px; }
+  .message { max-width: 92%; }
+  .sidebar { width: min(90vw, 340px); padding: 58px 16px 16px; }
+}

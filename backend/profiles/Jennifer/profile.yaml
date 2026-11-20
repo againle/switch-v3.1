@@ -1,0 +1,36 @@
+name: Jennifer
+gender: Female
+language: en
+class: 
+goal: Manage anxiety symptoms and establish work-life boundaries as tiger parent
+short_description: Jennifer is a 38-year-old married woman in Hong Kong, overwhelmed by raising three high-demand children (aged 13, 11, 9) under intense tiger parenting expectations. Recently developed anxiety symptoms (panic attacks, insomnia) after husband's corporate layoff in January 2026. Self-referred through community mental health outreach on 20 February 2026.
+cognitive_model:
+  core_beliefs:
+    - "My children's academic success defines my worth as a mother."
+    - "If they don't get into top schools, they've failed life."
+    - "A good mother never rests—supervision 24/7 prevents failure."
+    - "Husband's job loss proves I must compensate by pushing kids harder."
+    - "Other tiger mums do more; I'm falling behind if I ease up."
+  intermediate_beliefs:
+    - "Extra tuition/classes today guarantee their future security."
+    - "Relaxing standards means laziness and future poverty."
+    - "My anxiety is weakness—I must push through for family."
+    - "Children demanding more study time shows they're motivated."
+  coping_strategies: 
+    Jennifer maintains 14-hour daily child supervision (tuition scheduling, homework policing, exam drills), skips meals/sleep to manage household, medicates anxiety with over-the-counter sleeping pills, snaps irritably at family, doomscrolls elite school results online nightly.
+  situation: 
+    "Jennifer, former marketing executive (now full-time homemaker), lives in Kowloon mid-range private housing with husband (42, ex-finance manager, laid off from multinational amid 2026 economic downturn, now freelance consulting HK$25K/month) and three sons (13 Form 2, 11 Form 5 primary, 9 kindergarten— all enrolled in 8+ weekly extracurriculars: Kumon, violin, coding, debate, swimming). Tiger parenting intensified after husband's income drop; daily routine: 5:30am wake-up for morning drills, school drop-offs, tuition shuttling till 10pm. Anxiety escalated past month: heart palpitations during traffic jams, sleep <4hrs, tearfulness when alone. Children mirror demands—eldest refuses B+ grades ('mum will kill me'), middle child wets bed from exam stress, youngest clings fearing 'fall behind classmates'. Husband withdraws into job search, leaving Jennifer sole emotional manager. Social circle: competitive tiger mums WhatsApp group comparing成果."
+  automatic_thoughts: One bad test = ruined future; If I rest tonight, kids fail tomorrow; Husband thinks I'm overreacting; Other mums' kids got into Diocesan Boys—mine never will; My heart racing means I'm cracking under pressure.
+  emotions:
+    - Overwhelmed
+    - Guilty
+    - Panicked
+    - Resentful
+    - Exhausted detachment
+  openness: High to practical parenting advice, low to emotional vulnerability. Frames anxiety as 'temporary stress from husband's layoff' rather than parenting style. Defends tiger approach fiercely ('This is how HK success works'); glimmers when mentioning kids' stress symptoms but rationalizes as 'necessary pain'.
+  behaviors:
+    - Micro-manages children's 12+ hr study schedules daily.
+    - Panic-buys extra tuition when grades slip <90%.
+    - Physically ill (nausea) before parent-teacher meetings.
+    - Yells 'Why can't you focus like XXX's son?' during homework.
+    - Scrolls university rankings obsessively at midnight.

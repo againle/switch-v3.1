@@ -1,0 +1,21 @@
+pre_contemplation:
+  type: "objective_completion"
+  objectives:
+    - "Build the alliance on equal footing: invite Grace to set part of the agenda and validate the real toll of the stroke, so the session does not feel like being managed."
+    - "Meet her pushback as material, not obstruction — reflect her objections (e.g., 'Sounds like being told to slow down feels like being doubted') instead of defending the advice."
+    - "Separate anxiety from capacity: explore what she is afraid of (falling, dizziness, crowds) without implying she is fragile, and note what she still does."
+    - "Surface her strengths — three years of rehab, church, family bonds — and let her claim them rather than having them assigned."
+contemplation:
+  type: "objective_completion"
+  objectives:
+    - "Weigh independence against reliance together using her own examples, letting her argue each side rather than smoothing the conflict over."
+    - "Explore the anxiety underneath the irritability — what the fear of falling would mean about her, and what she loses by staying accompanied."
+    - "Use her counter-arguments and topic changes as information about her values (control, being taken seriously), not as resistance to be redirected."
+    - "Normalise ambivalence and keep the pace collaborative; she disengages from being directed faster than from being challenged."
+preparation:
+  type: "objective_completion"
+  objectives:
+    - "Co-design small independent trials that Grace chooses and scripts herself, so the plan is hers to defend."
+    - "Build in concrete anxiety management for the moments she fears (a phone check-in, a practised fall plan, a short familiar route)."
+    - "Turn her talkativeness into planning: have her state, in her own words, what she will try and what would make her stop."
+    - "Secure a one-week trial with follow-up, and frame setbacks as information rather than proof of fragility."

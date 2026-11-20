@@ -1,0 +1,34 @@
+name: Connie
+goal: Build confidence in independent mobility and emotional regulation
+gender: Female
+language: en
+class: 
+short_description: Connie is a 50-year-old female recovering from a stroke for three years. She lives in public housing with her husband and younger son, facing mobility challenges due to fear of dizziness and falling, concentration difficulties, and emotional instability. Identified by social worker on 7 June 2025 during onsite interview.
+cognitive_model:
+  core_beliefs:
+    - "My stroke prevents me from going out alone—dizziness and falling are too risky."
+    - "Concentration problems are permanent stroke aftereffects I can't control."
+    - "I must rely on family for safety and support at all times."
+    - "Emotional swings and impatience are just how I am now."
+    - "Social connections faded after stroke; I don't need more than family and church."
+  intermediate_beliefs:
+    - "Independent outings will lead to injury without accompaniment."
+    - "Topic-shifting in conversations is unavoidable due to brain changes."
+    - "Family dependence protects me from harm."
+    - "Expressing deeper emotions risks burdening others or showing weakness."
+  coping_strategies:
+    Connie relies on husband and younger son for all outings and rehab, avoids solo mobility due to fall fears, attends church for limited emotional outlets, and denies insight into her dependence and emotional needs while shifting topics to manage discomfort.
+  situation:
+    "Connie, a former full-time housewife, suffered a stroke three years ago causing left-side weakness, balance/coordination issues, blurry vision, and need for crutches/wheelchair. She lives in cramped Fortune Estate public housing with husband (50+, bus driver, caring but distant-harmonious) and younger son (20, unemployed, ASD-diagnosed, strong bond, accompanies her daily). Older son (23, employed) is distant, left home at 16 but helps occasionally. Receives disability allowance amid financial strain from husband's income. History of recovered postpartum depression; current concentration deficits, sound sensitivity, and crowd fears observed. No violence history. Weak support network post-stroke (lost badminton friends, distant siblings); attends church Saturdays and occasional free yoga."
+  automatic_thoughts: Fear of falling alone; My son needs my company more than I need independence; Church is enough support; Stroke damage can't be overcome; Family must always accompany me.
+  emotions:
+    - Stable baseline
+    - Irritated/excited on son/beliefs topics
+    - Impatient/annoyed (sound-sensitive)
+    - Nervous about crowds/independence
+  openness: Moderate; shares physical symptoms freely but lacks insight into emotional/dependence issues. Requires frequent redirection for topic shifts; fixed rehab views resist independence suggestions. Appears engaged but internally tied to family reliance.
+  behaviors:
+    - Seeks husband/son accompaniment for all outings/rehab/playground walks.
+    - Shifts topics rapidly; raises voice on sensitive issues.
+    - Attends church Saturdays; uses crutches daily.
+    - Denies emotional needs beyond stroke effects.
